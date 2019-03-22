@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function fl() {
+            let n = 5;
+            if (true) {
+                let n = 10
+            }
+            console.log(n); //输出值5
+        }
+        //解构这里的var i是全局提示了声明  所以最后这里a[i]()调用的是全局的i的值
+        var a = [];
+        for (var i = 0; i < 10; i++) {
+            a[i] = function() {
+                console.log(i);
+            }
+        }
+        a[6]();
+        //这里的let不声明不提升的！
+        var a = [];
+        for (let i = 0; i < 10; i++) {
+            a[i] = function() {
+                console.log(i);
+            }
+        }
+        a[6]();
+    </script>
+</body>
+
+</html>
