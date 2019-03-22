@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //声明以后不能改变可以使用方法添加进去
+        const foo = {}
+        foo.props = 123
+        console.log(foo);
+        //Object.freeze()金子往变量里面添加常规是空严格模式报错
+        const fs = Object.freeze({})
+        fs.props = 111
+        console.log(fs);
+    </script>
+</body>
+
+</html>
