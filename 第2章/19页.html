@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //结构let和const是es6新增的声明方式一大特性就是暂时性死区也就是说只要var了全局但是花括号内let了一个这个变量他不会和全局的冲突但是你想使用值全局的是就不能随意使用你只能赋值给let的声明的值。我这里就说他的其中一种特性
+        var tmp = 123;
+        if (true) {
+            tmp = 111; //这里会报错
+            let tmp = 'aaa'
+        }
+    </script>
+</body>
+
+</html>
