@@ -9,7 +9,18 @@
 </head>
 
 <body>
-  
+  <script>
+    //两种方法引用模板字符串本身
+    //第一引用模板字符串本身
+    let str = 'return' + '`Hello ${name}`'
+    let func = new Function('name',str)
+    console.log(func('jack'));
+
+    //第二引用模板字符串本身
+    let srt = '(name) => {`hello ${name}`}'
+    let funcs = eval.call(null, srt)
+    console.log(funcs('jack'));
+  </script>
 </body>
 
 </html>
