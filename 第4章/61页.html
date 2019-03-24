@@ -8,7 +8,10 @@
 </head>
 <body>
   <script>
-    
+    let evalExpr = /<%=(.+?)%>/g
+    let expr = /<%([\s\S]+?)%>/g
+    template = template.replace(evalExpr,'`);\n echo($1); echo(`').replace(expr,'`); \n echo(`')
+    template = 'echo(`'+template+'`);'
   </script>
 </body>
 </html>
