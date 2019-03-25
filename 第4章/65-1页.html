@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // var sender = '<script>alert("abc")<\/script>'用户输入的 恶意代码
+    var message = SaferHTML`<p>${sender} has sent you a message.</p>`
+    function SaferHTML(templateDate) {
+      var s = templateDate[0]
+      for (let i = 0; i < array.length; i++) {
+        var arg = String(arguments[i])
+        s += arg.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+        s += templateDate[i]
+      }
+      return s
+    }
+    //结果是<p>&lt;script&gt;alert("abc")&lt;/script&gt; has sent you a message.</p>
+  </script>
+</body>
+</html>
