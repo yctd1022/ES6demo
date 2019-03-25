@@ -20,5 +20,13 @@
     String.raw({raw: ['t','e','s','t']},0,1,2)
     // 两个都都是一样的 结果t0e1s2t
   </script>
+  <script>
+    var name = '小明'
+    var age = 18
+    var str = '我叫' + name + '今年' + age + '岁'
+    console.log(str);//我叫小明今年18岁
+    var strs = `我叫${name}今年${age}岁`
+    console.log(strs);//我叫小明今年18岁
+  </script>
 </body>
 </html>
